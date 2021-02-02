@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © 2021 Neosoft Technologies. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Indexer/etc/indexer.xsd">
+    <indexer id="algolia_store_locators" view_id="algolia_store_locators" class="Neosoft\StoreLocator\Model\Indexer\StoreLocator">
+        <title translate="true">Algolia Search Store Locators</title>
+        <description translate="true">
+            Rebuild store locators index.
+        </description>
+    </indexer>
+</config>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2021 Neosoft Technologies. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <storelocator>
+            <general>
+                <enable>1</enable>
+                <section_title>Store Locators</section_title>
+            </general>
+            <google_map>  
+                <std_latitude>37.787278</std_latitude>
+                <std_longitude>-122.4100557</std_longitude>        		
+                <map_zoom>8</map_zoom>
+            </google_map>
+            <manage_links>
+                <footer_link_enable>1</footer_link_enable>
+                <label_footer>Store Locators</label_footer>
+            </manage_links>      	      	    
+        </storelocator>         
+    </default>
+</config>

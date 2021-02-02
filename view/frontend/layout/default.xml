@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2021 Neosoft Technologies. All rights reserved.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>            
+        <referenceContainer name="footer">
+            <container name="cms_footer_links_container" label="Store Locators Footer Link" htmlTag="div" htmlClass="links" before="footer_links" />
+        </referenceContainer>
+        <referenceBlock name="footer_links">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" ifconfig="storelocator/manage_links/footer_link_enable" name="storelocator-footer-link">
+                <arguments >
+                    <argument  name="label" xsi:type="helper" helper="Neosoft\StoreLocator\Helper\Data::getFooterLinkLabel">
+                        <param name="label">value</param>
+                    </argument>
+                    <argument name="path" xsi:type="helper" helper="Neosoft\StoreLocator\Helper\Data::getFooterLink"></argument>                    
+                </arguments>
+            </block>
+        </referenceBlock>       
+    </body>
+</page>

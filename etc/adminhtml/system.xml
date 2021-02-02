@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2021 Neosoft Technologies. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>        
+        <tab id="neosoft" translate="label" sortOrder="1">
+            <label>NeoSoft</label>
+        </tab>
+        <section id="storelocator" translate="label" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Store Locator</label>
+            <tab>neosoft</tab>
+            <resource>Neosoft_StoreLocator::configuration</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Settings</label>
+                <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>                
+                <field id="section_title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Section Title</label>
+                    <comment>This text will display on the frontend.</comment>
+                </field>
+            </group>
+            <group id="google_map" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">              
+                <label>Google Map</label>
+                <field id="api_key" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>API Key</label>
+                    <comment>Google Maps API Key (v3)</comment>
+                </field>
+                <field id="std_latitude" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Standard Latitude</label>                      
+                    <comment>For Default Store</comment>
+                </field>
+                <field id="std_longitude" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Standard Longitude</label>                      
+                    <comment>For Default Store</comment>
+                </field>
+                <field id="map_zoom" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Map Zoom</label>
+                    <comment>Google Maps Zoom Level</comment>
+                </field>
+            </group>
+            <group id="manage_links" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Manage Links</label>
+                <field id="footer_link_enable" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable Footer Link</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="label_footer" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Footer Link Label</label>
+                    <comment>Label for footer link</comment>
+                </field>
+            </group>  
+        </section>
+    </system>
+</config>

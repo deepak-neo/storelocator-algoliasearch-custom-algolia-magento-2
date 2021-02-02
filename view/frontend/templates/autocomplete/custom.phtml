@@ -1,0 +1,22 @@
+<?php
+/**
+ * Copyright © 2021 Neosoft Technologies. All rights reserved.
+ */
+?>
+<!--  Store Locator template -->
+<script type="text/template" id="autocomplete_store_locator_template">
+    <a class="algoliasearch-autocomplete-hit" href="{{url}}">
+        <div class="info-without-thumb">
+            {{{_highlightResult.name.value}}}
+            {{#description}}
+            <div class="details">
+                {{{description}}}
+            </div>
+            {{/description}}
+            <div class="store_address details">
+                {{street}}, {{city}}, {{state}} - {{pincode}} ({{country}})
+            </div>
+        </div>
+        <div class="algolia-clearfix"></div>
+    </a>
+</script>

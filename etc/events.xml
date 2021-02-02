@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2021 Neosoft Technologies. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="algolia_after_create_configuration">
+        <observer name="customalgolia_frontend_configuration" instance="Neosoft\StoreLocator\Observer\UpdateFrontendConfiguration" />
+    </event>
+    <event name="algolia_products_index_before_set_settings">
+        <observer name="customalgolia_products_settings" instance="Neosoft\StoreLocator\Observer\UpdateProductsSettings" />
+    </event>
+</config>

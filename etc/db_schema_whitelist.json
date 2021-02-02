@@ -1,0 +1,31 @@
+{
+    "store_locator": {
+        "column": {
+            "id": true,
+            "store_id": true,
+            "title": true,
+            "description": true,
+            "street": true,
+            "city": true,
+            "state": true,
+            "pincode": true,
+            "country": true,
+            "latitude": true,
+            "longitude": true,
+            "email": true,
+            "phone": true,
+            "working_hours": true,
+            "creation_time": true,
+            "update_time": true,
+            "is_active": true,
+            "sort_order": true
+        },
+        "index": {
+            "STORE_LOCATOR_ID": true,
+            "STORE_LOCATOR_TTL_DESCRIPTION_STREET_CITY_STATE_PINCODE_COUNTRY": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

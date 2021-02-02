@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2021 Neosoft Technologies. All rights reserved.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="store_locator" resource="default" engine="innodb" comment="Store Locator Table">
+        <column xsi:type="smallint" name="id" padding="6" unsigned="false" nullable="false" identity="true" comment="Store Locator ID"/>
+        <column xsi:type="smallint" name="store_id" padding="5" unsigned="true" nullable="false" identity="false" comment="Store ID"/>
+        <column xsi:type="varchar" name="title" nullable="true" length="255" comment="Store Title"/>
+        <column xsi:type="mediumtext" name="description" nullable="true" comment="Description"/>
+        <column xsi:type="varchar" name="street" nullable="true" length="255" comment="Street"/>
+        <column xsi:type="varchar" name="city" nullable="true" length="255" comment="City"/>
+        <column xsi:type="varchar" name="state" nullable="true" length="255" comment="State"/>
+        <column xsi:type="varchar" name="pincode" nullable="true" length="255" comment="Pin Code"/>
+        <column xsi:type="varchar" name="country" nullable="true" length="20" comment="Country"/>
+        <column xsi:type="varchar" name="latitude" nullable="true" length="120" comment="Latitude"/>
+        <column xsi:type="varchar" name="longitude" nullable="true" length="120" comment="Longitude"/>
+        <column xsi:type="varchar" name="email" nullable="true" length="120" comment="Email"/>
+        <column xsi:type="varchar" name="phone" nullable="true" length="20" comment="Phone"/>
+        <column xsi:type="mediumtext" name="working_hours" nullable="true" comment="Working Hours"/> 
+        <column xsi:type="timestamp" name="creation_time" on_update="false" nullable="false" default="CURRENT_TIMESTAMP" comment="Store Creation Time"/>
+        <column xsi:type="timestamp" name="update_time" on_update="true" nullable="false" default="CURRENT_TIMESTAMP" comment="Store Modification Time"/>
+        <column xsi:type="smallint" name="is_active" padding="6" unsigned="false" nullable="false" identity="false" default="1" comment="Is Store Active"/>
+        <column xsi:type="smallint" name="sort_order" padding="6" unsigned="false" nullable="false" identity="false" default="0" comment="Store Sort Order"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+        <index referenceId="STORE_LOCATOR_IDENTIFIER" indexType="btree">
+            <column name="id"/>
+        </index>
+        <index referenceId="STORE_LOCATOR_TITLE_DESCRIPTION_STREET_CITY_STATE_PINCODE_COUNTRY" indexType="fulltext">
+            <column name="title"/>
+            <column name="description"/>
+            <column name="street"/>
+            <column name="city"/>
+            <column name="state"/>
+            <column name="pincode"/>
+            <column name="country"/>
+        </index>
+    </table>
+</schema>

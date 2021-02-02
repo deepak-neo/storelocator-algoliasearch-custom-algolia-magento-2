@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2021 Neosoft Technologies. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Neosoft_StoreLocator::storelocator" title="Store Locator" module="Neosoft_StoreLocator" sortOrder="10" resource="Neosoft_StoreLocator::storelocator"/>
+        <add id="Neosoft_StoreLocator::manage_stores" title="Manage Stores" module="Neosoft_StoreLocator" sortOrder="20" parent="Neosoft_StoreLocator::storelocator" action="storelocator/storelocator" resource="Neosoft_StoreLocator::manage_stores"/>
+        <add id="Neosoft_StoreLocator::configuration" title="Configurations" module="Neosoft_StoreLocator" sortOrder="30" parent="Neosoft_StoreLocator::storelocator" action="adminhtml/system_config/edit/section/storelocator" resource="Neosoft_StoreLocator::configuration" />	
+    </menu>
+</config>
