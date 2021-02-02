@@ -74,9 +74,9 @@ class StoreLocator implements Magento\Framework\Indexer\ActionInterface, Magento
 
 //            if ($this->isStoreLocatorsInAdditionalSections($storeId)) {
                 $data = ['store_id' => $storeId];
-            if (is_array($ids) && count($ids) > 0) {
-                $data['store_locator_ids'] = $ids;
-            }
+                if (is_array($ids) && count($ids) > 0) {
+                    $data['store_locator_ids'] = $ids;
+                }
 
                 $this->queue->addToQueue(
                     $this->fullAction,

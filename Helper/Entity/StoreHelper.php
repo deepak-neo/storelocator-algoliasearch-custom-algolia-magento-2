@@ -134,7 +134,8 @@ class StoreHelper
             }
 
             $storeLocatorObject['objectID'] = $storeLocator->getId();
-            $storeLocatorObject['url'] = "storelocator/storelocator" . $storeLocator->getId();
+            //Need to implement rounting for frontend
+            $storeLocatorObject['url'] = "storelocator/storelocator/" . $storeLocator->getId();
 //           $frontendUrlBuilder->getUrl(
 //                null,
 //                [
@@ -143,7 +144,6 @@ class StoreHelper
 //                ]
 //            );
             $storeLocatorObject['description'] = $this->strip($description, ['script', 'style']);
-            $storeLocatorObject['store_id'] = $storeLocator->getStoreId();
             $storeLocatorObject['street'] = $storeLocator->getStreet();
             $storeLocatorObject['city'] = $storeLocator->getCity();
             $storeLocatorObject['state'] = $storeLocator->getState();
