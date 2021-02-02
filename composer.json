@@ -1,16 +1,24 @@
 {
-  "name": "deepak-neo/storelocator-algoliasearch-custom-algolia-magento-2",
-  "description": "Store Locator module to extend Algolia Magento 2 extension",
-  "type": "magento2-module",
-  "license": ["MIT"],
-  "version": "1.0.0",
-  "require": {
-    "algolia/algoliasearch-magento-2": ">=1.7.0@dev"
-  },
-  "autoload": {
-    "files": [ "registration.php" ],
-    "psr-4": {
-      "Neosoft\\StoreLocator\\": ""
+    "name": "deepak-neo/storelocator-algoliasearch-custom-algolia-magento-2",
+    "description": "Store Locator module to extend Algolia Magento 2 extension",
+    "type": "magento2-module",
+    "license": ["MIT"],
+    "version": "1.0.0",
+    "require": {
+        "algolia/algoliasearch-magento-2": ">=1.7.0@dev"
+    },
+    "authors": [
+        {
+            "name": "Deepak Soni",
+            "email": "deepak.soni@neosoftmail.com"
+        }
+    ],
+    "minimum-stability": "dev", 
+    "prefer-stable": true,
+    "autoload": {
+        "files": ["registration.php"],
+        "psr-4": {
+            "Neosoft\\StoreLocator\\": ""
+        }
     }
-  }
 }
